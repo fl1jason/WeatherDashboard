@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weaather Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Left hand Side bar section -->
+        <aside>
+            <div class="search-section">
+                <input type="text" id="location" placeholder="Enter a location">
+                <button id="search">Search</button>
+                <div id="error"></div>
+            </div>
+            <hr />
+            <div class="recent-section" id="recent-locations">
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Area -->
+        <section>
+            <div id="weather">
+                <div class="weather-icon">
+                    <div class="weather-location" id="location-name">Enter a Location</div>
+                    <img src="assets/images/cloudy.png" alt="">
+                </div>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <span>Temperature:</span>
+                        <span id="temp_value">-</span>
+                    </div>
+                    <div class="wind">
+                        <span>Wind:</span>
+                        <span id="wind_value">-</span>
+                    </div>
+                    <div class="humidity">
+                        <span>Humidity:</span>
+                        <span id="humid_value">-</span>
+                    </div>
+                    <div class="uv-index">
+                        <span>UV Index:</span>
+                        <span id="uvi_value">-</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="forecast">
+                <h1>5-Day Forecast</h1>
+                <div id="forecast-days"></div>
+            </div>
+        </section>
+    </main>
+
+</body>
+<script src="assets/script.js"></script>
+</html>

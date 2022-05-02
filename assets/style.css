@@ -1,0 +1,155 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, blue, purple);
+}
+
+header h1 {
+    color: white;
+    font-size: 2em;
+}
+
+main {
+    display: flex;
+    flex-direction: row;   
+}
+
+section {
+    margin: 10px;
+    width: 75%;
+}
+
+aside {
+    margin: 10px;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 5px 5px #ccc;
+    background-color: #eee;
+}
+
+aside .search-section {
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+aside .search-section input {
+    border: 1px solid #ccc;
+    height: 30px;
+    border-radius: 5px;    
+    padding: 5px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+aside .search-section button {
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: rgb(38, 110, 234);
+    border: 0;
+    color: white;
+}
+
+aside .search-section #error {
+    color: black;
+    font-size: 0.8em;
+    height: 20px;
+    margin-top: 2px;
+}
+
+aside .recent-section {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+aside .recent-section .recent {
+    margin-top: 10px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+#weather {  
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px #ccc;
+}
+
+#weather .weather-location {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#weather .weather-info {
+    line-height: 2.0em;
+}
+
+#forecast {
+    display: none;
+    margin-top: 25px;
+}
+
+#forecast #forecast-days {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#forecast .forecast-day {
+    display: flex;
+    width: 19%;
+    min-height: 200px;
+    background-color: blue;
+    border-radius: 5px;
+    box-shadow: 5px 5px #ccc;
+}
+
+#forecast .forecast-day .weather-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5em;
+    padding: 10px;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    aside {
+        width: 95%;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    main {
+        flex-direction: column;   
+    }
+
+    #forecast #forecast-days {
+        flex-direction: column;
+    }
+
+    #forecast .forecast-day {
+        width: 100%;
+        min-height: auto;
+        margin-top: 10px;
+    }
+  }
